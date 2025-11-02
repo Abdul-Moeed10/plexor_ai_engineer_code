@@ -1,4 +1,4 @@
-# Plexor AI Engineer Test - Object Detection using YOLO
+# Plexor Junior AI Engineer Test - Object Detection using YOLO
 
 This is my submission for the Plexor Junior AI Engineer/Intern Practical Implementation Test
 
@@ -18,7 +18,7 @@ plexor_ai_engineer_code/
 ├── notebooks/                     # Complete training pipeline
 ├── dataset/                       # Sample labeled data
 ├── weights/best.pt                # Trained model weights
-├── annotated_outputs/             # Annotated videos for reference
+├── annotated_output/             # Annotated videos for reference
 └── REPORT.pdf                     # Summary report
 ```
 ### NOTE: This repository only contains samples of images/labels. Full dataset could not be uploaded due to size constraints.
@@ -32,6 +32,13 @@ plexor_ai_engineer_code/
 from google.colab import drive
 drive.mount('/content/drive')
 
+**Pre-installed in Colab:**
+- Python 3.10
+- PyTorch
+- OpenCV
+- NumPy
+- scikit-learn
+
 # Install dependencies
 !pip install ultralytics
 ```
@@ -40,9 +47,9 @@ drive.mount('/content/drive')
 ### Note: It is very important that the file structure be accurate in order to run the notebooks in colab
 
 1. **Open and run notebooks in Colab in the following order**:
-   `notebooks/extract_frames.ipynb`
-   `notebooks/plexor_training.ipynb`
-   `notebooks/plexor_inference.ipynb`
+   - `notebooks/extract_frames.ipynb`
+   - `notebooks/plexor_training.ipynb`
+   - `notebooks/plexor_inference.ipynb`
    
 2. **Organize data in Google Drive**:
 ```
