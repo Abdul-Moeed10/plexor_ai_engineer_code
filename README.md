@@ -5,7 +5,7 @@ This is my submission for the Plexor Junior AI Engineer/Intern Practical Impleme
 ## Overview
 
 Detects suspicious behavior in retail environments:
-- **Person**: Individuals in frame
+- **Person**: Individual in frame
 - **Item**: Products being handled/concealed
 
 **Performance**: 92.1% mAP@50, 95% precision, 86% recall
@@ -15,10 +15,11 @@ Detects suspicious behavior in retail environments:
 ## 📁 Repository Structure
 ```
 plexor_ai_engineer_code/
- notebooks/                        # Complete training pipeline
+├── notebooks/                     # Complete training pipeline
 ├── dataset/                       # Sample labeled data
-├── weights/best.pt                # Trained model weights (22.5MB)
-├── annotated_outputs/             # Detection results
+├── weights/best.pt                # Trained model weights
+├── annotated_outputs/             # Annotated videos for reference
+├── videos/                        # Source videos
 └── REPORT.pdf                     # Summary report
 ```
 
@@ -44,27 +45,27 @@ drive.mount('/content/drive')
    `notebooks/plexor_inference.ipynb`
    
 2. **Organize data in Google Drive**:
-   **This is important to be accurate in order to run the notebooks in colab**
+   **It is very important that this structure be accurate in order to run the notebooks in colab**
 ```
    plexor_ai_engineer/
-   ├── videos/              # Place source videos here
-   ├── frames/              # Extracted frames
+   ├── videos/                 # Place source videos here
+   ├── frames/                 # Extracted frames
       ├── plexor_fridge_theft/ #Extracted frames for fridge video
       ├── plexor_shelf_theft/  #extracted frames for shelf video
-   ├── labels_generated/  # Exported labels from Makesense.ai
-   ├── dataset/             # Organized train/val split
+   ├── labels_generated/       # Exported labels from Makesense.ai
+   ├── dataset/                # Organized train/val split
       ├── images/
           ├── train/
           ├── val/
       ├── labels/
           ├── train/
           ├── val/
-   ├── versions/            # Saves model versions
-   ├── outputs/             # Saves annotated videos
-   └── weights/             # Trained model output
+   ├── versions/               # Saves model versions
+   ├── outputs/                # Saves annotated videos
+   └── weights/                # Trained model output
 
 ```
-4. **Results saved** to `weights/best.pt` and `annotated_outputs/`
+3. **Results saved** to `weights/best.pt` and `annotated_outputs/`
 
 ---
 
@@ -72,8 +73,8 @@ drive.mount('/content/drive')
 
 - **Source**: 2 CCTV videos (from Plexor)
 - **Frames extracted**: 348 total
-  - Fridge area: 246 frames (interval: 10)
-  - Shelf area: 102 frames (interval: 2)
+  - Fridge video: 246 frames (interval: 10)
+  - Shelf video: 102 frames (interval: 2)
 - **Classes**: `person`, `item`
 - **Split**: 80% train (278), 20% val (70)
 - **Labeling tool**: [Makesense.ai](https://makesense.ai)
@@ -134,7 +135,7 @@ Annotated outputs available in `annotated_outputs/`
 2. **Class imbalance** (person: ~348 instances, item: ~80)
 3. **Compute constraints** (Colab timeout on long videos)
 
-**Solutions**: Batch size tuning, streaming inference, aggressive augmentation
+**Solutions**: Batch size tuning, streaming inference, augmentation
 
 ---
 
