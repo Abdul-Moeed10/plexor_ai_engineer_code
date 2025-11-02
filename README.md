@@ -19,7 +19,6 @@ plexor_ai_engineer_code/
 ├── dataset/                       # Sample labeled data
 ├── weights/best.pt                # Trained model weights
 ├── annotated_outputs/             # Annotated videos for reference
-├── videos/                        # Source videos
 └── REPORT.pdf                     # Summary report
 ```
 ### NOTE: This repository only contains samples of images/labels. Full dataset could not be uploaded due to size constraints.
