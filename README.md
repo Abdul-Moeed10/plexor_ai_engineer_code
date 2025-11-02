@@ -135,7 +135,7 @@ Annotated outputs available in `annotated_outputs/`
 2. **Class imbalance** (person: ~348 instances, item: ~80)
 3. **Compute constraints** (Colab timeout on long videos)
 
-**Solutions**: Batch size tuning, streaming inference, augmentation
+**Solutions**: Batch size tuning, streaming inference
 
 ---
 
