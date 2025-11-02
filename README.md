@@ -27,10 +27,6 @@ plexor_ai_engineer_code/
 ## Environment Setup
 
 **Platform**: Google Colab (NVIDIA T4 GPU)
-```python
-# Mount Google Drive
-from google.colab import drive
-drive.mount('/content/drive')
 
 **Pre-installed in Colab:**
 - Python 3.10
@@ -38,6 +34,11 @@ drive.mount('/content/drive')
 - OpenCV
 - NumPy
 - scikit-learn
+
+```python
+# Mount Google Drive
+from google.colab import drive
+drive.mount('/content/drive')
 
 # Install dependencies
 !pip install ultralytics
