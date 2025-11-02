@@ -133,6 +133,7 @@ results = model.predict(
 ```
 
 Annotated outputs available in `annotated_outputs/`
+Only one video is uploaded due to size constraints, other video can be sent if needed.
 
 ---
 
