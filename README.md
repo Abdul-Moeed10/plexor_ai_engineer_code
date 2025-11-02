@@ -144,12 +144,4 @@ Annotated outputs available in `annotated_outputs/`
 
 **Solutions**: Batch size tuning, streaming inference
 
----
-
-## 📦 Dependencies
-### Most dependencies are already installed in Google Colab
-```
-ultralytics
-```
-
 
