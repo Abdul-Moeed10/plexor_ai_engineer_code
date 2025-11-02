@@ -22,10 +22,10 @@ plexor_ai_engineer_code/
 ├── videos/                        # Source videos
 └── REPORT.pdf                     # Summary report
 ```
-
+### NOTE: This repository only contains samples of images/labels. Full dataset could not be uploaded due to size constraints.
 ---
 
-### Environment Setup
+## Environment Setup
 
 **Platform**: Google Colab (NVIDIA T4 GPU)
 ```python
@@ -37,7 +37,8 @@ drive.mount('/content/drive')
 !pip install ultralytics
 ```
 
-### Full Pipeline
+## Full Pipeline
+### Note: It is very important that the file structure be accurate in order to run the notebooks in colab
 
 1. **Open and run notebooks in Colab in the following order**:
    `notebooks/extract_frames.ipynb`
@@ -45,7 +46,6 @@ drive.mount('/content/drive')
    `notebooks/plexor_inference.ipynb`
    
 2. **Organize data in Google Drive**:
-   **It is very important that this structure be accurate in order to run the notebooks in colab**
 ```
    plexor_ai_engineer/
    ├── videos/                 # Place source videos here
@@ -129,7 +129,7 @@ Annotated outputs available in `annotated_outputs/`
 
 ---
 
-## 🛠️ Key Challenges
+## 🛠️ Challenges/Solutions
 
 1. **Limited dataset** (348 frames, single subject)
 2. **Class imbalance** (person: ~348 instances, item: ~80)
@@ -138,13 +138,6 @@ Annotated outputs available in `annotated_outputs/`
 **Solutions**: Batch size tuning, streaming inference, augmentation
 
 ---
-
-## 📝 Documentation
-
-Full technical report: [`docs/REPORT.pdf`](docs/REPORT.pdf)
-
----
-
 
 ## 📦 Dependencies
 ### Most dependencies are already installed in Google Colab
