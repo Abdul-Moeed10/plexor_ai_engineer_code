@@ -1,0 +1,5 @@
+path: /content/drive/MyDrive/plexor_ai_engineer/dataset
+train: images/train
+val: images/val
+nc: 2
+names: ['person', 'item']
